@@ -1,0 +1,140 @@
+body {
+  font-family: $font-family-base;
+  font-weight: $font-regular;
+  font-size: $font-base-size;
+  line-height: $font-base-line-height;
+  color: $body-color;
+  background-color: $body-background;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+.pro-regular {
+  font-weight: $font-regular;
+}
+
+.strong,
+.bold,
+strong {
+  font-weight: $font-bold !important;
+}
+
+.italics,
+.italic {
+  font-style: italic;
+}
+
+.upper,
+.uppercase {
+  text-transform: uppercase;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.65em;
+  line-height: 0;
+  color: inherit;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 0.65em;
+  line-height: 0;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+.h1 {
+  font-family: $font-cairo;
+  font-weight: $font-bold;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 1.36px;
+
+  @include lg {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+}
+
+h2,
+.h2 {
+  font-family: $font-cairo;
+  font-weight: $font-bold;
+  font-size: 1.5625rem;
+  line-height: 30px;
+
+  @include lg {
+    font-size: 1.875rem;
+    line-height: 40px;
+  }
+
+}
+
+h3,
+.h3 {
+  font-family: $font-cairo;
+  font-weight: $font-bold;
+  font-size: 1.25rem;
+  line-height: 20px;
+
+  @include lg {
+    font-size: 1.5625rem;
+    line-height: 38px;
+  }
+}
+
+h4,
+.h4 {
+  font-family: $font-cairo;
+  font-weight: $font-bold;
+  font-size: 1.3125rem;
+  line-height: 32px;
+}
+
+h5,
+.h5 {
+  font-family: $font-cairo;
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 2px;
+
+  @include lg {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+.eyebrow-text {
+  font-family: $font-cairo;
+  font-weight: $font-bold;
+  font-size: 0.9375rem;
+  line-height: 22px;
+  letter-spacing: 3px;
+
+  @include lg {
+    font-size: 1.25rem;
+    line-height: 30px;
+  }
+}
+
+.mb-18 {
+  margin-bottom: 18px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}

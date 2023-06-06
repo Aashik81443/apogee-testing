@@ -1,0 +1,159 @@
+.investor-page-content {
+    position: relative;
+    padding-top: 45px;
+
+    @include lg {
+        padding-top: 92px;
+    }
+
+    &.bg-cover {
+        .inner-bg {
+            height: 700px;
+
+            @include xl {
+                height: 812px;
+            }
+
+            @include xxl {
+                height: 700px;
+            }
+        }
+    }
+
+
+
+    .right-content {
+        padding-top: 50px;
+
+        @include lg {
+            padding-top: 0;
+
+        }
+
+        .text-video-wrap {
+            @include lg {
+                padding-top: 80px;
+                padding-bottom: 60px;
+            }
+        }
+
+        .overview-block {
+            padding: 50px 0;
+
+            @include lg {
+                padding: 70px 0;
+            }
+
+        }
+
+        .news-block {
+            padding: 50px 0;
+
+            @include lg {
+                padding: 70px 0;
+            }
+
+            .row {
+                [class*="col-"] {
+                    margin-bottom: 35px;
+
+                    @include lg {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+
+        .card-pricing {
+            position: relative;
+            z-index: 1;
+            margin-bottom: -60px;
+
+            @include lg {
+                margin-bottom: -100px;
+            }
+
+            @include xl {
+                margin-bottom: -140px;
+            }
+        }
+    }
+
+}
+
+
+.events-block {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background: url('./assets/images/colored-wave-bg.jpg') no-repeat;
+    background-size: cover;
+
+    @include lg {
+        padding-top: 200px;
+        padding-bottom: 70px;
+    }
+
+    @include xl {
+        padding-top: 236px;
+    }
+
+    .row {
+        [class*="col-"] {
+            margin-bottom: 35px;
+
+            @include lg {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+.contact-block {
+    padding: 99px 0;
+    @include lg{
+        padding-bottom: 200px;
+    }
+    .email-wrap {
+        font-size: 25px;
+        font-weight: $font-bold;
+        color: $primary;
+        line-height: 30px;
+
+        @include lg {
+            position: relative;
+            padding-right: 120px;
+            font-size: 36px;
+            line-height: 47px;
+
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    .email-text {
+        font-size: 18px;
+        font-weight: $font-bold;
+        color: $dark-blue;
+        text-decoration: none;
+
+        @include lg {
+            font-size: 24px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .card-subscribe{
+        margin-top: 70px;
+        @include lg{
+            margin-top: 100px;
+        }
+    }
+}

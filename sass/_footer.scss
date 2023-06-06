@@ -1,0 +1,199 @@
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 22px 0 38px;
+    background-color: $primary;
+    z-index: -1;
+    @include sm {
+        padding: 36px 0;
+    }
+
+    @include lg {
+        padding: 72px 0;
+    }
+
+    @include xl {
+        padding: 86px 0;
+    }
+
+    &__logo {
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+
+        @include sm {
+            left: -36px;
+        }
+
+        @include md {
+            left: -45px;
+        }
+
+        @include lg {
+            left: -60px;
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        img {
+            max-width: 103px;
+
+            @include sm {
+                max-width: 130px;
+            }
+
+            @include md {
+                max-width: 160px;
+            }
+
+            @include lg {
+                max-width: 190px;
+            }
+
+            @include xl {
+                max-width: 222px;
+            }
+        }
+    }
+
+    &__wrap {
+
+        @include lg {
+            padding-left: 10%;
+        }
+    }
+
+    &__body {
+        .row-reverse {
+            flex-direction: row-reverse !important;
+        }
+
+        .align-items-center {
+            align-items: center !important;
+        }
+
+        .footer-nav {
+            text-align: center;
+
+            ul {
+
+                @include mdDown {
+                    padding-bottom: 16px;
+                }
+
+                @include lg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                }
+
+                li {
+                    color: $white;
+                    @include mdDown {
+                        margin-bottom: 18px;
+                    }
+
+                    @include lg {
+                        display: inline-block;
+                        margin-right: 26px;
+                    }
+
+                    @include xl {
+                        margin-right: 42px;
+                    }
+
+                    @include xxl {
+                        margin-right: 54px;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+
+                        @include mdDown {
+                            margin-bottom: 26px;
+                        }
+                    }
+
+                    a {
+                        color: $white;
+                        font-size: 16px;
+                        line-height: 22px;
+                        text-decoration: none;
+                        font-family: $font-cairo;
+                        font-weight: $font-bold;
+                        transition: all 0.3s;
+
+                        @include sm {
+                            font-size: 18px;
+                        }
+
+                        @include xl {
+                            font-size: 20px;
+                        }
+
+                        svg {
+                            width: 26px;
+                            height: 26px;
+
+                            @include sm {
+                                width: 34px;
+                                height: 34px;
+                            }
+
+                            @include lg {
+                                width: 42px;
+                                height: 42px;
+                            }
+
+                            @include xxl {
+                                width: 46px;
+                                height: 46px;
+                            }
+                        }
+
+
+                        &:hover {
+                            color: $yellow;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .social-link {
+                        display: inline-block;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+
+            @include lg {
+                text-align: left;
+            }
+
+            span {
+                color: rgba($white, 0.8);
+                display: block;
+                font-size: 10px;
+                line-height: 18px;
+                font-family: $font-cairo;
+
+                @include sm {
+                    font-size: 12px;
+                }
+
+                @include lg {
+                    font-size: 14px;
+                }
+
+                @include xl {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

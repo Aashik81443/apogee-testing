@@ -1,0 +1,33 @@
+.interior-page-content {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 100px;
+
+    @include lg {
+        padding-top: 92px;
+        padding-bottom: 200px;
+    }
+
+    &.bg-cover {
+        .inner-bg {
+            // height: 700px;          
+
+            // @include xxl {
+            //     height: 700px;
+            // }
+        }
+    }
+
+
+
+    .right-content {
+        padding-top: 50px;
+
+        @include lg {
+            padding-top: 80px;
+
+        }
+
+    }
+
+}

@@ -1,0 +1,205 @@
+.btn {
+    font-size: 16px;
+    color: $white;
+    position: relative;
+    display: inline-block;
+    border-radius: 30px 0;
+    font-weight: $font-bold;
+    font-family: $font-cairo;
+    text-transform: uppercase;
+    vertical-align: middle;
+    user-select: none;
+    background-color: $primary;
+    padding: 13px 26px 12px 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    letter-spacing: 1.6px;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+    @include sm {
+        font-size: 18px;
+        letter-spacing: 1.75px;
+        padding: 13px 28px 12px 34px;
+    }
+
+    @include lg {
+        border-radius: 40px 0;
+        font-size: 20px;
+        letter-spacing: 2px;
+        padding: 13px 30px 12px 40px;
+    }
+
+    &.btn-primary {
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+        }
+
+        &--top,
+        &--bottom,
+        &--left,
+        &--right {
+            color: $white;
+            position: relative;
+            background-color: $primary;
+            transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+            // .end-icon,
+            // .start-icon {
+            //     color: $yellow;
+            //     font-weight: 700;
+            //     line-height: 1;
+            //     display: inline-block;
+            //     vertical-align: middle;
+            //     font-size: 22px;
+            // }
+
+            &::before {
+                height: 100%;
+                width: 100%;
+                color: $white;
+                background-color: $primary;
+                transition: 0.3s ease-out;
+            }
+
+            &:hover {
+                color: $primary;
+                background-color: $white;
+
+                .end-icon,
+                .start-icon {
+                    color: $lime-green !important;
+                }
+            }
+        }
+
+        &--top,
+        &--bottom {
+            transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+            &::before {
+                left: 0;
+                right: 0;
+                transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+            }
+
+            &:hover {
+
+                &::before {
+                    height: 0%;
+                }
+            }
+        }
+
+        &--top {
+
+            &::before {
+                bottom: 0;
+            }
+        }
+
+        &--bottom {
+
+            &::before {
+                top: 0;
+            }
+        }
+
+        &--left,
+        &--right {
+            transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+
+            &::before {
+                top: 0;
+                bottom: 0;
+                transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+            }
+
+            &:hover {
+
+                &::before {
+                    width: 0%;
+                }
+            }
+        }
+
+        &--left {
+
+            &::before {
+                left: 0;
+            }
+        }
+
+        &--right {
+
+            &::before {
+                right: 0;
+            }
+        }
+    }
+
+    .end-icon {
+        margin-left: 10px;
+
+        @include sm {
+            margin-left: 12px;
+        }
+
+        @include lg {
+            margin-left: 16px;
+        }
+    }
+
+    .start-icon {
+        margin-right: 10px;
+
+        @include sm {
+            margin-right: 12px;
+        }
+
+        @include lg {
+            margin-right: 16px;
+        }
+    }
+
+    .end-icon,
+    .start-icon {
+        color: $yellow;
+        line-height: 1;
+        font-size: 20px;
+        font-weight: 700;
+        position: relative;
+        top: -4px;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all 0.4s;    
+
+        svg {
+            stroke-width: 1;
+            width: 32px;
+
+            @include lg {
+                width: 30px;
+            }
+
+            @include custom-size(1440px) {
+                width: 35px;
+            }
+        }
+
+        &:hover {
+            color: $lime-green;
+        }
+    }
+
+    &:hover {
+        color: $primary;
+        background-color: $white;
+        border-color: $lime-green;
+    }
+}

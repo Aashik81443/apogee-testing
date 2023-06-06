@@ -1,0 +1,25 @@
+{
+  "name": "apogge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf css",
+    "compile": "node-sass --output-style=expanded --source-map=true --error-bell sass/main.scss style.css",
+    "prefix": "postcss assets/css/style.css --use=autoprefixer --map=false --output=style.css",
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output /style.min.css style.css",
+    "dev": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify"
+  },
+  "author": "Test",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "bootstrap": "^4.6.0",
+    "clean-css-cli": "^5.6.2",
+    "postcss-cli": "^10.1.0"
+  }
+}
